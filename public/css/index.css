@@ -1,0 +1,51 @@
+body,html{
+    margin:0;
+    padding: 0;
+}
+@font-face {
+    font-family: BigJohn;
+    src: url("../../fonts/bigjohn.otf") format("opentype");
+}
+
+
+video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    filter: blur(5px) saturate(2);
+
+
+}
+
+.content {
+    position: relative;
+    width:auto;
+    height: auto;
+    text-align: center;
+    margin-top: 17%;
+
+}
+
+.content h1{
+    color: #FFFFFF;
+    font-family: BigJohn;
+    font-size: 8em;
+
+}
+.content p{
+    color:#FFFFFF;
+    font-family: BigJohn;
+}
+
+.modal{
+    position: relative;
+    width:auto;
+    height:auto;
+
+}
+

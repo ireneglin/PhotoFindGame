@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<title>Game page</title>
+				<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+				<link rel="stylesheet" type="text/css" href="/css/readable.css">
+				<link rel="stylesheet" type="text/css" href="/css/game_checkpoints.css">
+	</head>
+	<body>
+	<% include partials/navbar%>
+
+		
+<section class="container">
+
+        <h1 id="gamename">Game</h1>
+		<section class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Game Details</h3>
+			</div>
+			<div class="panel-body">
+				<h4 id="gameplace"></h4>
+				<div id="description">
+					
+					<p id="gamedescription"></p>
+				</div>
+				</div>
+		</section>
+		<div id="registration">
+			<p id="not_registered" class="hidden alert alert-dismissible alert-danger">You haven't registered yet for this game. Click on "Register" to join this game!   
+			<button id="regiserbutton" onclick="register()" class="btn btn-primary btn-xs">Register</button>
+			</p>
+			<p id="admin" class="hidden alert alert-dismissible alert-success">You are the game host. Click on a checkpoint to check the new uploaded photos.</p>
+			<div id="progression" class="hidden">
+				<p>Here is your progression in this game:</p>
+				<div class="progress">
+				  <div class="progress-bar progress-bar-success" style="width: 0%"></div>
+				  <div class="progress-bar progress-bar-warning" style="width: 0%"></div>
+				</div>
+			</div>	
+			<div id="loading" class="not_hidden">
+				<p>Loading checkpoints and your status in the game...</p>
+				
+			</div>	
+		</div>
+
+
+		<section class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Checkpoints</h3>
+			</div>
+			<div class="panel-body">
+				<section id="checkpoints">
+				</section>
+				<div id="buttons">
+				</div>
+			</div>
+		</section>
+		<div>
+							<a href="/home"><button type="button" class="btn btn-primary pull-right">Home</button></a>
+					</div>
+</section>
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/game_checkpoints.js"></script>
+	</body>
+</html>

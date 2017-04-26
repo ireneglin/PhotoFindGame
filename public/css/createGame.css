@@ -1,0 +1,23 @@
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand>img {
+    height: 100%;
+    padding:5px;
+    width: auto;
+}
+
+#upload-photo{
+    height:200px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+
+img{
+    border-radius: 5px;
+}
+
+button{
+    margin-left: 5px;
+}

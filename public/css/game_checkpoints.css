@@ -1,0 +1,86 @@
+
+.progress{
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.hidden{
+	display: none;
+}
+
+.not_hidden{
+	display: initial;
+}
+
+.alert{
+	display: block;
+}
+
+
+
+#checkpoints div div{
+	width: 80%;
+	list-style-type: none;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 5px;
+}
+
+#checkpoints img{
+	width: 80%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 5px;
+}
+
+
+#buttons{
+	text-align: right;
+	margin-right: 5%;
+	margin-bottom: 10%;
+}
+
+.found{
+	background-color: rgba(0, 255, 0, 1);
+}
+
+.submitted{
+	background-color: rgba(255, 150, 0, 1);
+}
+
+.modal_header{
+	text-align: center;
+}
+
+.modal img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+
+	#checkpoints div div{
+		width: 28%;
+		float: left;
+		margin-left: 2%;
+		margin-right: 2%
+	}
+
+	#checkpoints img{
+		width: 90%;
+		padding: 0 auto;
+	}
+
+	.photos_line{
+		display: inline-block;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+}
+

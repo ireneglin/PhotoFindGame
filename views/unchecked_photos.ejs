@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<title>Unchecked Photos</title>
+		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/readable.css">
+		<link rel="stylesheet" type="text/css" href="/css/unchecked_photos.css">
+	</head>
+	<body>
+
+	</body>
+	<% include partials/navbar%>
+
+<section class="container">
+
+        <h1 id="gamename">Game</h1>
+		<section class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Checkpoint: Unchecked Photos</h3>
+			</div>
+			<div class="panel-body">
+				<h4 id="gameplace"></h4>
+
+					<div id="message">
+						<p>If you have any photos to approve, they will be displayed below.  Click one to accept or refuse it.</p>
+					</div>
+
+					<section id="submissions">
+					</section>
+					<div>
+							<button type="button" onclick="goBack()" class="btn btn-primary pull-right">Done</button>
+					</div>
+				</div>
+		</section>
+
+
+</section>
+
+		<div id="modal" class="modal hidden">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
+		        <h4 class="modal-title">Photo</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p id="date"></p>
+		        <img id="selected_photo" src="" alt="Impossible to display the image">
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" id="refuse">Refuse</button>
+		        <button type="button" class="btn btn-success" id="accept">Accept</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/unchecked_photos.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoFind - Add Checkpoint</title>
+		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/css/readable.css">
+        <link rel="stylesheet" type="text/css" href="/css/createGame.css">
+</head>
+<body>
+<% include partials/navbar%>
+<section class="container">
+    <div class="jumbotron">
+        <h1>Checkpoints</h1>
+
+
+        <form action="/api/games/<%= gameID %>/createCheckpoint" method="post">
+            
+<section class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Create Checkpoint</h3>
+  </div>
+  <div class="panel-body">
+            <aside class="row">
+
+
+                <div class="form-group col-md-3">
+                    <label class="btn btn-primary btn-xs">
+                        Choose Photo <input type="file" id="imagefile" accept="image/*" style="display: none;">
+                    </label>
+                    <!--We'll put the base64 version of the image in this div-->
+                             <div id="b64image"></div>
+                             <div id="b64imageDisplay"></div>
+
+                             <h5 id="b64filename"></h5>
+                </div>
+                <div class="form-group col-md-9">
+                    <label for="checkpointHint">Hint to find this photo location</label>
+                    <textarea class="form-control" name="checkpointHint" id="checkpointHint" rows="6" ></textarea>
+                </div>
+                
+                
+            </aside>
+            <input type="hidden" name="gui" value="true">
+            <aside>
+                <div class="radio">
+                <label>
+                    <input type="radio" name="isDone" id="optionsRadios1" value="true" checked="">
+                    This is my last checkpoint
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="isDone" id="optionsRadios2" value="false">
+                    Add another checkpoint after this checkpoint
+                </label>
+            </div>
+            </aside>
+            <aside>
+
+            <input type="submit" class="btn btn-success pull-right" id="submitBtn" value="Create">
+            </aside>
+        </form>
+    </div>
+</div>
+</section>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/createGame.js"></script>
+</body>
+</html>

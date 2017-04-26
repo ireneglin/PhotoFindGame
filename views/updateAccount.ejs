@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Update Account</title>
+		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/readable.css">
+	</head>
+
+	<body>
+	<% include partials/navbar%>
+		<div class="container">
+
+		    <div class="col-sm-6 col-sm-offset-3">
+
+		        <h1>Update Account</h1>
+
+		        <!-- -->
+		        <!-- edit user fields action="/updateAccount"-->
+			<p id="not_registered" class="not_hidden alert alert-dismissible alert-danger">You must complete ALL fields below to update your account!</p>
+				
+		        <form method="post" class="form-horizontal updateForm">
+
+					<div class="form-group">
+					    <% if(user.local.firstName){%>
+					    	<label class="control-label">Current First Name: <%= user.local.firstName %></label><br>
+						<%}%>
+
+						<label class="col-lg-2 control-label">Update First Name</label>
+						<div class="col-lg-10">
+				        	<input type="text" class="form-control" id="inputFName" placeholder="First Name">
+				      	</div>
+				    </div>
+
+				    <div class="form-group">
+					    <% if(user.local.lastName){%>
+					    	<label class="control-label">Current Last Name: <%= user.local.lastName %></label><br>
+
+					    <%}%>				    
+
+				      	<label class="col-lg-2 control-label">Update Last Name</label>
+				      	<div class="col-lg-10">
+				       	 <input type="text" class="form-control" id="inputLName" placeholder="Last Name">
+				      	</div>
+				    </div>
+
+				    <div class="form-group">
+					    <% if(user.local.username){%>
+					    	<label class="control-label">Current Alias: <%= user.local.username %></label><br>
+					    <%}%>
+
+				     	 <label class="col-lg-2 control-label">Update Username</label>
+				     	 <div class="col-lg-10">
+				     	   <input type="text" class="form-control" id="inputUName" placeholder="Usename">
+				     	 </div>
+				    </div>
+
+				    <div class="form-group">
+					    <% if(user.local.country){%>
+					    	<label class="control-label">Current Country: <%= user.local.country %></label><br>
+					    <%}%>
+
+				     	 <label class="col-lg-2 control-label">Update Country</label>
+				     	 <div class="col-lg-10">
+				     	   <input type="text" class="form-control" id="inputCountry" placeholder="Country">
+				     	 </div>
+				    </div>
+
+				    <div class="form-group">
+					    <% if(user.local.city){%>
+					    	<label class="control-label">Current City: <%= user.local.city %></label><br>
+					    <%}%>
+
+				     	 <label class="col-lg-2 control-label">Update City</label>
+				     	 <div class="col-lg-10">
+				     	   <input type="text" class="form-control" id="inputCity" placeholder="City">
+				     	 </div>
+				    </div>
+				    
+					<div class="form-group">
+				      	<label class="col-lg-2 control-label">Account Activation/ Deactivation</label>
+				     	<div class="col-lg-10">
+				     	    <div class="radio">
+					        	<label>
+						            <input type="radio" name="optionsAD" id="activate" value="true" checked>
+						            Activate
+					            </label>
+				        	</div>
+					        <div class="radio">
+					          	<label>
+						            <input type="radio" name="optionsAD" id="deactivate" value="false">
+						            Deactivate
+					          	</label>
+					        </div>
+				      	</div>
+				    </div>
+
+				    <div class="form-group">
+				      	<label class="col-lg-2 control-label">Account Level</label>
+				     	<div class="col-lg-10">
+				     	    <div class="radio">
+					        	<label>
+						            <input type="radio" name="optionsALvl" id="player" value="false" checked>
+						            Player
+					            </label>
+				        	</div>
+					     <!--   <div class="radio">
+					          	<label>
+						            <input type="radio" name="optionsALvl" id="admin" value="true">
+						            Admin<br>(This option is only on the signup page for localhost/fresh DB installs by TAs/Prof for marking)
+					          	</label>
+					        </div>  -->
+				      	</div>
+				    </div>
+
+		            <button type="submit" class="btn btn-warning btn-lg" onclick="update()">Submit</button>
+		            <a href="/profile" class="btn btn-primary btn-lg">Back to Profile</a>
+		        </form>
+	        </div>
+	    </div>
+
+
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/updateAccount.js"></script>
+	</body>
+</html>
+

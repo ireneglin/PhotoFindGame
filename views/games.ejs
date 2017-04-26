@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>PhotoFind - Games</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="/css/readable.css">
+<link type="text/css" rel="stylesheet" href="/css/createGame.css">
+</head>
+<body>
+<% include partials/navbar%>
+
+<article class="jumbotron container">
+<h1>Games</h1>
+
+<div class="btn-group btn-group-justified">
+  <a id="button1" href="#" class="btn btn-primary">Browse All</a>
+  <a id="button2" href="#" class="btn btn-default">Playing</a>
+  <a id="button3" href="#" class="btn btn-default">Hosting</a>
+</div>
+
+<br/>   
+
+<div>
+    <table class="table table-striped table-bordered table-condensed" id="gamestbl">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Difficulty</th>
+                            <th>City</th>
+                            <th>Country</th>
+                        </tr>
+                    </thead>
+                </table>
+      <a href="/creategame" id="creategame"><button class="btn btn-primary btn-xs">Create Game</button></a>
+
+</div>
+
+
+
+</article>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/gameSearch.js"></script>
+</body>
+</html>

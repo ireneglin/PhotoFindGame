@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="/css/readable.css">
+		<link rel="stylesheet" type="text/css" href="/css/homeStyle.css">
+		<title>PhotoFind - Home</title>
+	</head>
+	<body>
+
+	<% include partials/navbar%>
+
+
+<article class="jumbotron container">
+
+<section class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">How to Play PhotoFind</h3>
+  </div>
+  <div class="panel-body">
+
+Playing a game is easy!  Find a game in your area to play from the Menu->Browse games list.  Using the photos provided by the game creator, find the checkpoint/location of each photo and take a selfie in the same location to prove that you have found it. You’ll get points for successfully completing each checkpoint.
+<br><br>
+Ready to move to the next level?  Create your own game for others to play in your neighbourhood! 
+
+
+  </div>
+</section>
+
+<section class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Games Playing</h3>
+  </div>
+  <div class="panel-body">
+
+
+				<div>
+					<table class="table table-striped table-bordered table-condensed" id="gamesplay">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Difficulty</th>
+											<th>City</th>
+											<th>Country</th>
+										</tr>
+									</thead>
+
+								</table>
+				<a href="/games" id="AllGames"><button class="btn btn-primary btn-xs">Show All Games</button></a>
+								
+				</div>
+
+
+  </div>
+</section>
+
+
+<section class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Games Hosting</h3>
+  </div>
+  <div class="panel-body">
+
+
+				<div>
+					<table class="table table-striped table-bordered table-condensed" id="gameshost">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Difficulty</th>
+											<th>City</th>
+											<th>Country</th>
+										</tr>
+									</thead>
+
+								</table>
+				<a href="/games" id="AllGames"><button class="btn btn-primary btn-xs">Show All Games</button></a>
+								
+				</div>
+
+
+  </div>
+</section>
+
+
+</article>
+		
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/home.js"></script>
+
+	</body>
+</html>

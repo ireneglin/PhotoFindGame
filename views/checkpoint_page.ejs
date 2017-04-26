@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Checkpoint page</title>
+		<link rel="stylesheet" type="text/css" href="/css/readable.css">
+		<link rel="stylesheet" type="text/css" href="/css/checkpoint_page.css">
+	</head>
+	<body>
+	<% include partials/navbar%>
+
+
+
+<section class="container">
+
+        <h1 id="gametitle">Game</h1>
+		<section class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Checkpoint Photo</h3>
+			</div>
+			<div class="panel-body">
+				<h4 id="gameplace"></h4>
+
+		<div class="jumbotron" id="content">
+			<div id="photo"><img id="checkpointphoto" src="" alt="Impossible to display the image"></div>
+			<p id="instructions">If you think you have found the checkpoint, click Upload to send us a photo of you at that place. You can also view a hint if you can't find it.
+				<div id="warning">WARNING: Everytime you look at the hint you will lose 5 points!</div></p>
+			<p id="hint" class="hidden"></p>
+			<div id="buttons">
+				<button type="button" onclick="goBack()" class="btn btn-primary">Back</button>
+				<button type="button"  id="seehint" class="btn btn-danger" onclick="hint()">See Hint</button>
+				<button type="button"  id="upload" class="btn btn-success" onclick="upload()">Upload a Photo</button>
+			</div>
+		</div>
+			<div id="submitform" class="hidden">
+				<p>Select the photo to upload (Remember: You must be in the photo too!):<br></p>
+
+				<label class="btn btn-primary">
+                        Choose File <input id="file" type="file" name="photo"  accept="image/*" onchange="previewPhoto()" style="display: none;">
+                </label>
+				<img id="preview" src="" alt="Image preview..." >
+				<input class="btn btn-success" id="SubmitButton" type="submit" value="Submit" onclick="uploadphoto()">
+			</div>
+		</div>
+	</section>
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/checkpoint_page.js"></script>
+	</body>
+</html>
